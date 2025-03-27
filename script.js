@@ -13,14 +13,15 @@ const meigenlist=["誘惑に負けた1時間で、ライバルは前に進んで
 const date=new Date;
 const dateid=date.getMonth()+" "+date.getDate()+" "+date.getFullYear();
 
-if(localStorage.getItem(dateid)==="NaN"||localStorage.getItem(dateid)===""){
-    localStorage.setItem(dateid,0);
-}
+
 
 let sumtime=parseInt(localStorage.getItem(dateid));
 
 shokika();
 function shokika(){
+    if(localStorage.getItem(dateid)==="NaN"||localStorage.getItem(dateid)===""){
+        localStorage.setItem(dateid,0);
+    }
     var random=Math.floor(Math.random()*6);
     meigen.innerText=meigenlist[random];
     main.style.display = 'block';
