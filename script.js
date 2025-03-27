@@ -19,7 +19,7 @@ let sumtime=parseInt(localStorage.getItem(dateid));
 
 shokika();
 function shokika(){
-    if(localStorage.getItem(dateid)==="NaN"||localStorage.getItem(dateid)===""){
+    if(localStorage.getItem(dateid)===null||localStorage.getItem(dateid)===""){
         localStorage.setItem(dateid,0);
     }
     var random=Math.floor(Math.random()*6);
