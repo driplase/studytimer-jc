@@ -15,13 +15,13 @@ const dateid=date.getMonth()+" "+date.getDate()+" "+date.getFullYear();
 
 
 
-let sumtime=parseInt(localStorage.getItem(dateid));
 
 shokika();
 function shokika(){
     if(localStorage.getItem(dateid)===null||localStorage.getItem(dateid)===""){
         localStorage.setItem(dateid,0);
     }
+    let sumtime=parseInt(localStorage.getItem(dateid));
     var random=Math.floor(Math.random()*6);
     meigen.innerText=meigenlist[random];
     main.style.display = 'block';
