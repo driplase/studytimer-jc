@@ -25,12 +25,12 @@ function shokika(){
     meigen.innerText=meigenlist[random];
     main.style.display = 'block';
     study.style.display = 'none';
-    var hour = Math.floor(sumtime / 3600); // 1時間 = 3600秒
-    var min = Math.floor(sumtime / 60);
+    var hour = Math.floor(sumtime / 3600);
+    var min = Math.floor(sumtime %3600 /60);
     var sec = sumtime % 60;
     sum.innerText = String(hour).padStart(2, '0') + ":" +String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
 }
-const sound = new Audio('決定ボタンを押す4.mp3'); // 音声ファイルのパスを指定
+const sound = new Audio('決定ボタンを押す4.mp3');
 
 
 let counttime=0;
